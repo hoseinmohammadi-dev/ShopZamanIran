@@ -105,6 +105,26 @@ export default async function homePage() {
             })}
           </div>
         </section>
+        {/* sec5 */}
+        <section className='mt-8 mx-[7%]'>
+          <h2 className='text-xl font-bold text-black/75'>ساعت های زنانه زمان ایران</h2>
+          <div className='flex justify-between mt-3'>
+            {data && data.slice(22,27).map((val) => {
+              return (
+                <div key={val.refCode} className='w-[250px] bg-white shadow-lg rounded-2xl p-2.5'>
+                  <div>
+                    <img src={val.image} alt="" />
+                  </div>
+                  <div className='text-[16px] mt-12'>{val.title}</div>
+                  <div className='flex justify-end mt-4'>
+                    <div>{val.price}</div>
+                    <Image className='rounded-2xl overflow-hidden' src='/icon/toman.svg' alt="Pic" width={30} height={50} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
 
       </main>
     </>
