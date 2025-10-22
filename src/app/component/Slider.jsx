@@ -10,9 +10,8 @@ export default function MySlider() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
-      navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 4000 }}
       loop={true}
       spaceBetween={30}
       slidesPerView={1}
