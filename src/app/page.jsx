@@ -2,8 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import MySlider from './component/Slider'
+import getData from './services/getData'
 
-export default function homePage() {
+export default async function homePage() {
+  let data = await getData("https://68f3de25fd14a9fcc42a135a.mockapi.io/products")
   return (
     <>
       <header>
@@ -17,12 +19,13 @@ export default function homePage() {
             <Link href=''>سوالات متداول</Link>
             <Link href=''>مقالات</Link>
           </div>
-          <div>
+          <div className='flex gap-1'>
             <Image src='/icon/basket.svg' alt="Pic" width={25} height={25} />
+            <p>سبد خرید</p>
           </div>
         </div>
       </header>
-      <main>
+      <main className='h-[1000vh]'>
         {/* sec1 */}
         <section className='mt-8 px-[5%] flex justify-center gap-2.5'>
           <div className='w-[950px] rounded-2xl overflow-hidden'>
@@ -81,6 +84,28 @@ export default function homePage() {
             <Image className='rounded-2xl overflow-hidden' src='/image/baner.jpeg' alt="Pic" width={10000} height={50} />
           </Link>
         </section>
+
+        {/* sec4 */}
+        <section className='mt-8 mx-[7%]'>
+          <h2 className='text-xl font-bold text-black/75'>محصولات لاکچری زمان ایران</h2>
+          <div className='flex justify-between mt-3'>
+            {data && data.slice(13,18).map((val) => {
+              return (
+                <div key={val.refCode} className='w-[250px] bg-white shadow-lg rounded-2xl p-2.5'>
+                  <div>
+                    <img src={val.image} alt="" />
+                  </div>
+                  <div className='text-[16px] mt-12'>{val.title}</div>
+                  <div className='flex justify-end mt-4'>
+                    <div>{val.price}</div>
+                    <Image className='rounded-2xl overflow-hidden' src='/icon/toman.svg' alt="Pic" width={30} height={50} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
       </main>
     </>
   )
