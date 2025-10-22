@@ -3,6 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import MySlider from './component/Slider'
 import getData from './services/getData'
+import { FaPhone } from "react-icons/fa";
+import { MdOutlineMail } from "react-icons/md";
+import { FaLocationArrow } from "react-icons/fa";
+
 
 export default async function homePage() {
   let data = await getData("https://68f3de25fd14a9fcc42a135a.mockapi.io/products")
@@ -25,7 +29,7 @@ export default async function homePage() {
           </div>
         </div>
       </header>
-      <main className='h-[1000vh]'>
+      <main>
         {/* sec1 */}
         <section className='mt-8 px-[5%] flex justify-center gap-2.5'>
           <div className='w-[950px] rounded-2xl overflow-hidden'>
@@ -89,34 +93,14 @@ export default async function homePage() {
         <section className='mt-8 mx-[7%]'>
           <h2 className='text-xl font-bold text-black/75'>محصولات لاکچری زمان ایران</h2>
           <div className='flex justify-between mt-3'>
-            {data && data.slice(13,18).map((val) => {
+            {data && data.slice(13, 18).map((val) => {
               return (
                 <div key={val.refCode} className='w-[250px] bg-white shadow-lg rounded-2xl p-2.5'>
                   <div>
                     <img src={val.image} alt="" />
                   </div>
-                  <div className='text-[16px] mt-12'>{val.title}</div>
-                  <div className='flex justify-end mt-4'>
-                    <div>{val.price}</div>
-                    <Image className='rounded-2xl overflow-hidden' src='/icon/toman.svg' alt="Pic" width={30} height={50} />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </section>
-        {/* sec5 */}
-        <section className='mt-8 mx-[7%]'>
-          <h2 className='text-xl font-bold text-black/75'>ساعت های زنانه زمان ایران</h2>
-          <div className='flex justify-between mt-3'>
-            {data && data.slice(22,27).map((val) => {
-              return (
-                <div key={val.refCode} className='w-[250px] bg-white shadow-lg rounded-2xl p-2.5'>
-                  <div>
-                    <img src={val.image} alt="" />
-                  </div>
-                  <div className='text-[16px] mt-12'>{val.title}</div>
-                  <div className='flex justify-end mt-4'>
+                  <div className='text-[16px] mt-4'>{val.title}</div>
+                  <div className='flex justify-end mt-5'>
                     <div>{val.price}</div>
                     <Image className='rounded-2xl overflow-hidden' src='/icon/toman.svg' alt="Pic" width={30} height={50} />
                   </div>
@@ -126,6 +110,74 @@ export default async function homePage() {
           </div>
         </section>
 
+        {/* sec5 */}
+        <section className='mt-8 mx-[7%]'>
+          <h2 className='text-xl font-bold text-black/75'>ساعت های زنانه زمان ایران</h2>
+          <div className='flex justify-between mt-3'>
+            {data && data.slice(22, 27).map((val) => {
+              return (
+                <div key={val.refCode} className='w-[250px] bg-white shadow-lg rounded-2xl p-2.5'>
+                  <div className='rounded-xl overflow-hidden'>
+                    <img src={val.image} alt="" />
+                  </div>
+                  <div className='text-[16px] mt-4'>{val.title}</div>
+                  <div className='flex justify-end mt-5'>
+                    <div>{val.price}</div>
+                    <Image className='rounded-2xl overflow-hidden' src='/icon/toman.svg' alt="Pic" width={30} height={50} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        {/* sec6 */}
+        <section className='mt-8 mx-[7%]'>
+          <h2 className='text-xl font-bold text-black/75'>ساعت های مردانه زمان ایران</h2>
+          <div className='flex justify-between mt-3'>
+            {data && data.slice(0, 5).map((val) => {
+              return (
+                <div key={val.refCode} className='w-[250px] bg-white shadow-lg rounded-2xl p-2.5'>
+                  <div>
+                    <img src={val.image} alt="" />
+                  </div>
+                  <div className='text-[16px] mt-4'>{val.title}</div>
+                  <div className='flex justify-end mt-5'>
+                    <div>{val.price}</div>
+                    <Image className='rounded-2xl overflow-hidden' src='/icon/toman.svg' alt="Pic" width={30} height={50} />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        <footer className='flex items-center mt-8 p-5 bg-stone-200 '>
+          <Image className='rounded-2xl overflow-hidden ml-12' src='/icon/newLogo.png' alt="Pic" width={150} height={50} />
+
+          <div className='w-7/12'>
+            <h4>مرجع ساعت های اورجینال ، لوکس و کلکسیونی - زمان ایران</h4>
+            <p className='text-sm text-black/75 mt-2'>فروشگاه آنلاین زمان ایران، در زمینه واردات و فروش اینترنتی انواع ساعت با بیش از 30 سال فعالیت در این حوزه می باشد. فروش انواع ساعت های اورجینال به همراه انواع برند های لوکس ساعت در فروشگاه ساعت زمان ایران ساعت زمان ایران با سابقه ی بیش از 30 سال در این حوضه توانسته با اکثر برند های لوکس ساعت در جهان همکاری داشته باشه علاوه بر این فروشگاه ساعت زمان ایران اکثر محصولات انواع برند های اورجینال مثل کاسیو, تیسوت, سیکو, سیتیزن, امپریو آرمانی, هوگو بوس, فسیل, دنیل کلین را به صورت مستقیم به دست علاقه مندان این محصولات میرساند.</p>
+          </div>
+
+          <div className='w-5/12 mr-20'>
+            <p>پشتیانی از 9 صبح الی 18 عصر</p>
+            <div className='*:text-sm *:mt-1'>
+            <div className='flex items-center gap-1.5'>
+              <FaPhone className='text-stone-500'/>
+              <p>09129272196</p>
+            </div>
+            <div className='flex items-center gap-1.5'>
+              <MdOutlineMail className='text-stone-500'/>
+              <p>Info@Zamaniran.com</p>
+            </div>
+            <div className='flex gap-1.5 relative'>
+              <FaLocationArrow  className='text-stone-500 relative top-2'/>
+              <p className='w-[270px]'>تهران – اتوبان ستاری – مجتمع تجاری کوروش – طبقه منفی یک – واحد 166 - گالری زمان ایران</p>
+            </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </>
   )
