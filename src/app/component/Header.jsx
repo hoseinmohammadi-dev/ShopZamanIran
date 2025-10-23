@@ -33,18 +33,27 @@ export default function Header() {
           <img className='w-5' src="/icon/basket.svg" alt="" />
           <p>سبد خرید</p>
         </div>
+      </div>
 
-        {/* mobile menu dropdown */}
-        {open && (
-          <div className="fixed top-20 left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden animate-fade-in">
+      {/* mobile menu overlay and dropdown */}
+      {open && (
+        <>
+          <div
+            className="fixed inset-0 top-20 bg-black/75 bg-opacity-60 z-20 transition-opacity duration-200"
+            onClick={() => setOpen(false)}
+          />
+          <div className="fixed top-20 left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden animate-fade-in z-30">
             <Link href="" onClick={() => setOpen(false)}>صفحه نخست</Link>
             <Link href="" onClick={() => setOpen(false)}>فروشگاه</Link>
             <Link href="" onClick={() => setOpen(false)}>سوالات متداول</Link>
             <Link href="" onClick={() => setOpen(false)}>مقالات</Link>
-            <Link className='text-white bg-stone-500 px-4 py-1 rounded-sm' href="" onClick={() => setOpen(false)}>سبد خرید</Link>
+            <Link className='flex text-black bg-stone-200 px-4 py-1 rounded-sm' href="" onClick={() => setOpen(false)}>
+              <img className='w-5 ml-2' src="/icon/basket.svg" alt="" />
+              <p>سبد خرید</p>
+            </Link>
           </div>
-        )}
-      </div>
+        </>
+      )}
     </header>
   )
 }
