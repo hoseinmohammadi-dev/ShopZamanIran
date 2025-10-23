@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+
+@font-face {
+  font-family: "YekanBakhFa";
+  src: url("/fonts/YekanBakhNoEn-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YekanBakhFa";
+  src: url("/fonts/YekanBakhNoEn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YekanBakhEn";
+  src: url("/fonts/YekanBakhEn-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YekanBakhEn";
+  src: url("/fonts/YekanBakhEn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-feature-settings: "tnum";
+  font-variant-numeric: normal;
+}
+
+body {
+  font-family: "YekanBakhEn", sans-serif;
+  direction: rtl;
+  unicode-bidi: plaintext;
+  font-variant-numeric: normal;
+  font-feature-settings: "ss01";
+}
+
+* {
+  font-family: inherit;
+  font-variant-numeric: normal;
+}
