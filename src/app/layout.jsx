@@ -3,7 +3,7 @@ import Header from './component/Header'
 import Footer from './component/Footer'
 
 export const metadata = {
-  title: "فروشگاه ساعت",
+  title: "فروشگاه زمان ایران",
   description: "خرید آنلاین انواع ساعت مچی مردانه و زنانه",
 };
 
