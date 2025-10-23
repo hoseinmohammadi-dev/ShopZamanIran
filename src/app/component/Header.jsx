@@ -29,8 +29,8 @@ export default function Header() {
         </div>
 
         {/* basket */}
-        <div className='hidden md:flex gap-1'>
-          <img className='w-5' src="/icon/basket.svg" alt="" />
+        <div className='hidden md:flex gap-1 text-black bg-stone-100 px-4 py-1 rounded-sm'>
+          <img className='w-5 ml-2' src="/icon/basket.svg" alt="" />
           <p>سبد خرید</p>
         </div>
       </div>
