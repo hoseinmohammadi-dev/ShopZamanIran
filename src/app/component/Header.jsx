@@ -8,7 +8,7 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   return (
     <header className='mb-[110px]'>
-      <div className='fixed top-0 left-0 z-10 w-full h-20 flex justify-between items-center px-3 bg-white shadow-sm'>
+      <div className='fixed top-0 left-0 z-10 w-full h-20 flex justify-between items-center px-[5%] bg-white shadow-sm'>
 
         {/* mobile menu */}
         <div className='md:hidden' onClick={() => setOpen(!open)}>
@@ -30,7 +30,7 @@ export default function Header() {
 
         {/* basket */}
         <div className='hidden md:flex gap-1'>
-          <img className='w-[20px]' src="/icon/basket.svg" alt="" />
+          <img className='w-5' src="/icon/basket.svg" alt="" />
           <p>سبد خرید</p>
         </div>
 

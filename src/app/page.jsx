@@ -79,7 +79,7 @@ export default async function homePage() {
                 <p className='text-[10px] md:text-[14px] lg:text-[16px] mt-2 md:mt-4'>{val.title}</p>
                 <div className='flex justify-end mt-2.5 md:mt-5 relative bottom-0 left-0'>
                   <p className='text-[10px] md:text-[16px] font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image className='w-[15px] md:w-[20px]' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
+                  <Image className='w-[15px] md:w-5' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
                 </div>
               </div>
             )
@@ -100,7 +100,7 @@ export default async function homePage() {
                 <p className='text-[10px] md:text-[14px] lg:text-[16px] mt-2 md:mt-4'>{val.title}</p>
                 <div className='flex justify-end mt-2.5 md:mt-5 relative bottom-0 left-0'>
                   <p className='text-[10px] md:text-[16px] font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image className='w-[15px] md:w-[20px]' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
+                  <Image className='w-[15px] md:w-5' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
                 </div>
               </div>
             )
@@ -121,7 +121,7 @@ export default async function homePage() {
                 <p className='text-[10px] md:text-[14px] lg:text-[16px] mt-2 md:mt-4'>{val.title}</p>
                 <div className='flex justify-end mt-2.5 md:mt-5 relative bottom-0 left-0'>
                   <p className='text-[10px] md:text-[16px] font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image className='w-[15px] md:w-[20px]' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
+                  <Image className='w-[15px] md:w-5' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
                 </div>
               </div>
             )
