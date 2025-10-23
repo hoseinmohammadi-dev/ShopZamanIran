@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import MySlider from './component/Slider'
 import getData from './services/getData'
+import Sec4 from './component/sec4'
 
 
 export default async function homePage() {
@@ -67,25 +68,7 @@ export default async function homePage() {
       </section>
 
       {/* sec4 */}
-      <section className='mt-8 mx-[5%]'>
-        <h2 className='text-md md:text-xl font-bold text-black/75'>محصولات لاکچری زمان ایران</h2>
-        <div className='relative flex justify-between gap-2 mt-3 overflow-x-hidden '>
-          {data && data.slice(14,19).map((val) => {
-            return (
-              <div key={val.refCode} className='min-w-[110px] w-[250px] bg-white shadow-sm rounded-2xl p-1.5 md:p-2.5'>
-                <div>
-                  <img src={val.image} alt="" />
-                </div>
-                <p className='text-[10px] md:text-[14px] lg:text-[16px] mt-2 md:mt-4'>{val.title}</p>
-                <div className='flex justify-end mt-2.5 md:mt-5 relative bottom-0 left-0'>
-                  <p className='text-[10px] md:text-[16px] font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image className='w-[15px] md:w-5' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
+      <Sec4/>
 
       {/* sec5 */}
       <section className='mt-8 mx-[5%]'>
