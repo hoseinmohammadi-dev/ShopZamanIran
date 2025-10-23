@@ -4,11 +4,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
-import getData from './../services/getData';
+import getData from '../services/getData';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function Sec4() {
+export default function Sec6() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -21,13 +21,13 @@ export default function Sec4() {
 
   return (
     <section className='mt-10 mx-[5%] relative'>
-      <h2 className='text-base sm:text-lg md:text-xl font-bold text-black/80 text-right'>محصولات لاکچری زمان ایران</h2>
+      <h2 className='text-base sm:text-lg md:text-xl font-bold text-black/80 text-right'>محصولات مردانه زمان ایران</h2>
       <div className='relative mt-4'>
         <Swiper
           modules={[Navigation]}
           navigation={{
-            nextEl: '.custom-next',
-            prevEl: '.custom-prev',
+            nextEl: '.custom-next2',
+            prevEl: '.custom-prev2',
           }}
           spaceBetween={10}
           slidesPerView={2.2}
@@ -40,7 +40,7 @@ export default function Sec4() {
           }}
           className='swiper-custom relative z-10'
         >
-          {data && data.slice(16, 24).map((val) => (
+          {data && data.slice(9,16).map((val) => (
             <SwiperSlide key={val.refCode}>
               <div className='flex flex-col justify-between items-center bg-white shadow-md rounded-2xl min-w-[130px] max-w-[180px] sm:max-w-[220px] md:max-w-60 min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
                 <div className='w-full aspect-square flex justify-center items-center'>
@@ -59,13 +59,13 @@ export default function Sec4() {
         </Swiper>
 
         <div className='hidden sm:flex absolute top-1/2 -translate-y-1/2 justify-between w-full px-2 md:px-4 z-20'>
-          <button className='custom-prev bg-white shadow-md hover:bg-gray-100 transition-all w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-gray-700'>
+          <button className='custom-prev2 bg-white shadow-md hover:bg-gray-100 transition-all w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-gray-700'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 md:w-5 md:h-5">
               <path d="M9 6l6 6-6 6" />
             </svg>
           </button>
 
-          <button className='custom-next bg-white shadow-md hover:bg-gray-100 transition-all w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-gray-700'>
+          <button className='custom-next2 bg-white shadow-md hover:bg-gray-100 transition-all w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-gray-700'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 md:w-5 md:h-5">
               <path d="M15 18l-6-6 6-6" />
             </svg>

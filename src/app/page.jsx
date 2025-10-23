@@ -4,6 +4,8 @@ import Link from 'next/link'
 import MySlider from './component/Slider'
 import getData from './services/getData'
 import Sec4 from './component/sec4'
+import Sec5 from './component/sec5'
+import Sec6 from './component/sec6'
 
 
 export default async function homePage() {
@@ -22,7 +24,7 @@ export default async function homePage() {
       </section>
 
       {/* sec2 */}
-       <section className='mt-6 px-[7%] hidden lg:flex justify-between *:bg-white *:p-2.5 *:shadow-lg *:rounded-2xl *:w-19/100 *:flex *:items-center *:justify-around'>
+      <section className='mt-6 px-[7%] hidden lg:flex justify-between *:bg-white *:p-2.5 *:shadow-lg *:rounded-2xl *:w-19/100 *:flex *:items-center *:justify-around'>
         <div >
           <img className='w-[50px] h-[50px]' src="/icon/poshtibani.png" alt="poshtibani" />
           <div>
@@ -68,49 +70,12 @@ export default async function homePage() {
       </section>
 
       {/* sec4 */}
-      <Sec4/>
+      <Sec4 />
 
       {/* sec5 */}
-      <section className='mt-8 mx-[5%]'>
-        <h2 className='text-md md:text-xl font-bold text-black/75'>محصولات زنانه زمان ایران</h2>
-        <div className='relative flex justify-between gap-2 mt-3 overflow-x-hidden '>
-          {data && data.slice(23,28).map((val) => {
-            return (
-              <div key={val.refCode} className='min-w-[110px] w-[250px] bg-white shadow-sm rounded-2xl p-1.5 md:p-2.5'>
-                <div>
-                  <img src={val.image} alt="" />
-                </div>
-                <p className='text-[10px] md:text-[14px] lg:text-[16px] mt-2 md:mt-4'>{val.title}</p>
-                <div className='flex justify-end mt-2.5 md:mt-5 relative bottom-0 left-0'>
-                  <p className='text-[10px] md:text-[16px] font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image className='w-[15px] md:w-5' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
-
+      <Sec5 />
       {/* sec6 */}
-      <section className='mt-8 mx-[5%]'>
-        <h2 className='text-md md:text-xl font-bold text-black/75'>محصولات مردانه زمان ایران</h2>
-        <div className='relative flex justify-between gap-2 mt-3 overflow-x-hidden '>
-          {data && data.slice(0,5).map((val) => {
-            return (
-              <div key={val.refCode} className='min-w-[110px] w-[250px] bg-white shadow-sm rounded-2xl p-1.5 md:p-2.5'>
-                <div>
-                  <img src={val.image} alt="" />
-                </div>
-                <p className='text-[10px] md:text-[14px] lg:text-[16px] mt-2 md:mt-4'>{val.title}</p>
-                <div className='flex justify-end mt-2.5 md:mt-5 relative bottom-0 left-0'>
-                  <p className='text-[10px] md:text-[16px] font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image className='w-[15px] md:w-5' src='/icon/toman.svg' alt="Pic" width={0} height={0} />
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
+      <Sec6 />
     </main>
   )
 }
