@@ -9,12 +9,12 @@ export default function page() {
             <span className="mx-1">{">"}</span>
             <Link href="/shop">فروشگاه</Link>
             <span className="mx-1">{">"}</span>
-            <Link className="text-black/70" href="">زنانه</Link>
+            <Link className="text-black/70" href="">مردانه</Link>
         </div>
 
         {/* sec2 title */}
         <div className="mx-[5%] flex justify-between mt-2.5 lg:mt-4 mb-3 md:mb-5" >
-            <h2 className="text-[20px] md:text-[30px] lg:text-[36px]">فروشگاه زنانه</h2>
+            <h2 className="text-[20px] md:text-[30px] lg:text-[36px]">فروشگاه مردانه</h2>
         </div>
 
 
