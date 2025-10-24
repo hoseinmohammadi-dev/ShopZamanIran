@@ -9,7 +9,7 @@ export default async function page() {
 
     return (
 
-        <>
+        <section className="min-h-screen container mx-auto">
             <div className="mx-[5%] flex text-black/60 text-[12px] md:text-[14px]">
                 <Link href="/">صفحه اصلی</Link>
                 <span className="mx-1">{">"}</span>
@@ -42,6 +42,6 @@ export default async function page() {
                 ))}
             </div>
 
-        </>
+        </section>
     )
 }
