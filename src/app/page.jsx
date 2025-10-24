@@ -6,7 +6,6 @@ import Sec4 from './component/sec4'
 import Sec5 from './component/sec5'
 import Sec6 from './component/sec6'
 
-
 export default async function homePage() {
   return (
     <main className='container mx-auto'>
@@ -16,8 +15,12 @@ export default async function homePage() {
           <MySlider />
         </div>
         <div className='flex md:flex-col justify-between w-full md:w-[350px] *:w-48/100 md:*:w-full mt-4 md:mt-0'>
+        <Link href="/shop/women">
           <Image src='/image/womenSec.png' alt="Pic" width={350} height={350} className='rounded-2xl' />
+        </Link>
+        <Link href="/shop/man">
           <Image src='/image/manSec.jpeg' alt="Pic" width={350} height={350} className='rounded-2xl' />
+        </Link>
         </div>
       </section>
 
