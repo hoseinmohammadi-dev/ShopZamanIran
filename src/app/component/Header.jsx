@@ -45,8 +45,8 @@ export default function Header() {
           <div className="fixed top-20 left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden animate-fade-in z-30">
             <Link href="/" onClick={() => setOpen(false)}>صفحه نخست</Link>
             <Link href="/shop" onClick={() => setOpen(false)}>فروشگاه</Link>
-            <Link href="" onClick={() => setOpen(false)}>سوالات متداول</Link>
-            <Link href="" onClick={() => setOpen(false)}>مقالات</Link>
+            <Link href="/faq" onClick={() => setOpen(false)}>سوالات متداول</Link>
+            <Link href="/articles" onClick={() => setOpen(false)}>مقالات</Link>
             <Link className='flex text-black bg-stone-200 px-4 py-1 rounded-sm' href="" onClick={() => setOpen(false)}>
               <img className='w-5 ml-2' src="/icon/basket.svg" alt="" />
               <p>سبد خرید</p>
