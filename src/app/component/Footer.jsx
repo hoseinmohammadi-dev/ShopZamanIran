@@ -2,7 +2,6 @@ import React from 'react'
 import { FaPhone } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa";
-import Image from 'next/image';
 
 export default function Footer() {
   return (

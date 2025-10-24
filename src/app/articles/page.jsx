@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function page() {
     return (
 
-        <section className="min-h-[55dvh]">
+        <section className="min-h-[65dvh] lg:min-h-[55dvh]">
         <div className="mx-[5%] flex text-black/60 text-[12px] md:text-[14px]">
             <Link href="/">صفحه اصلی</Link>
             <span className="mx-1">{">"}</span>
