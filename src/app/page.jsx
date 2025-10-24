@@ -74,6 +74,7 @@ export default async function homePage() {
 
       {/* sec5 */}
       <Sec5 />
+      
       {/* sec6 */}
       <Sec6 />
     </main>
