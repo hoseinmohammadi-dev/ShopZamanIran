@@ -24,8 +24,8 @@ export default function Header() {
         <div className='hidden md:flex gap-6 *:hover:text-red-700'>
           <Link href='./'>صفحه نخست</Link>
           <Link href='/shop'>فروشگاه</Link>
-          <Link href=''>سوالات متداول</Link>
-          <Link href=''>مقالات</Link>
+          <Link href='/faq'>سوالات متداول</Link>
+          <Link href='/articles'>مقالات</Link>
         </div>
 
         {/* basket */}
