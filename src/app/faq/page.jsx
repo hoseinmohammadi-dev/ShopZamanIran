@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FAQAccordion from "../component/FAQAccordion";
 
 export default function page() {
     return (<>
@@ -12,6 +13,9 @@ export default function page() {
         <div className="mx-[5%] flex justify-between mt-2.5 lg:mt-4 mb-3 md:mb-5" >
             <h2 className="text-[20px] md:text-[30px] lg:text-[36px]">سوالات متداول</h2>
         </div>
+
+        {/* sec3 faq */}
+        <FAQAccordion/>
     </>
 
     )
