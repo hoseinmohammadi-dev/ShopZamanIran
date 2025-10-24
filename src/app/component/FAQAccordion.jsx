@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 export default function FAQAccordion() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(1);
   const toggle = (index) => setOpenIndex(openIndex === index ? null : index);
 
   return (
