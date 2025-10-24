@@ -2,14 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import MySlider from './component/Slider'
-import getData from './services/getData'
 import Sec4 from './component/sec4'
 import Sec5 from './component/sec5'
 import Sec6 from './component/sec6'
 
 
 export default async function homePage() {
-  let data = await getData("https://68f3de25fd14a9fcc42a135a.mockapi.io/products")
   return (
     <main className='container mx-auto'>
       {/* sec1 */}
@@ -64,7 +62,7 @@ export default async function homePage() {
 
       {/* sec3 */}
       <section className='mt-6 px-[5%]'>
-        <Link href=''>
+        <Link href="/shop">
           <Image className='rounded-2xl overflow-hidden' src='/image/baner.jpeg' alt="Pic" width={10000} height={50} />
         </Link>
       </section>

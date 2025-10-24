@@ -23,7 +23,7 @@ export default function Header() {
         {/* list link */}
         <div className='hidden md:flex gap-6 *:hover:text-red-700'>
           <Link href='./'>صفحه نخست</Link>
-          <Link href=''>فروشگاه</Link>
+          <Link href='/shop'>فروشگاه</Link>
           <Link href=''>سوالات متداول</Link>
           <Link href=''>مقالات</Link>
         </div>
@@ -43,8 +43,8 @@ export default function Header() {
             onClick={() => setOpen(false)}
           />
           <div className="fixed top-20 left-0 w-full bg-white shadow-md flex flex-col items-center gap-4 py-6 md:hidden animate-fade-in z-30">
-            <Link href="" onClick={() => setOpen(false)}>صفحه نخست</Link>
-            <Link href="" onClick={() => setOpen(false)}>فروشگاه</Link>
+            <Link href="/" onClick={() => setOpen(false)}>صفحه نخست</Link>
+            <Link href="/shop" onClick={() => setOpen(false)}>فروشگاه</Link>
             <Link href="" onClick={() => setOpen(false)}>سوالات متداول</Link>
             <Link href="" onClick={() => setOpen(false)}>مقالات</Link>
             <Link className='flex text-black bg-stone-200 px-4 py-1 rounded-sm' href="" onClick={() => setOpen(false)}>
