@@ -42,7 +42,7 @@ export default function Sec4() {
         >
           {data && data.slice(16, 24).map((val) => (
             <SwiperSlide key={val.refCode}>
-              <div className='flex flex-col justify-between items-center bg-white shadow-md rounded-2xl min-w-[130px] max-w-[180px] sm:max-w-[220px] md:max-w-60 min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
+              <div className='flex flex-col justify-between items-center bg-white rounded-2xl min-w-[130px] max-w-[180px] sm:max-w-[220px] md:max-w-60 min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
                 <div className='w-full aspect-square flex justify-center items-center'>
                   <img src={val.image} alt={val.title} className='rounded-xl object-cover w-full h-full' />
                 </div>

@@ -20,9 +20,9 @@ export default async function store() {
             </div>
 
             {/* sec3 Products page */}
-            <div className="mx-[5%] flex flex-wrap justify-center lg:justify-between gap-5">
+            <div className="mx-[2%] md:mx-[5%] flex flex-wrap justify-center lg:justify-between gap-5">
             {data && data.map((val) => (
-                <div key={val.refCode} className='bg-white shadow-md rounded-2xl min-w-[120px] max-w-[134px] sm:max-w-[220px] md:max-w-60 min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
+                <div key={val.refCode} className='bg-white shadow-md rounded-2xl min-w-[120px] max-w-[145px] sm:max-w-[200px] xl:max-w-[230px] min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
                     <div className='w-full aspect-square flex justify-center items-center'>
                         <img src={val.image} alt={val.title} className='rounded-xl object-cover w-full h-full' />
                     </div>
