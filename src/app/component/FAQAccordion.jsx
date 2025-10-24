@@ -42,6 +42,21 @@ export default function FAQAccordion() {
           <p className='text-[12px] md:text-[14px] lg:text-[16px] w-[95%]'>تمامی محصولات دارای گارانتی هستند و از سازندگان معتبر تهیه می‌شوند. همچنین کارشناسان ما در صورت تمایل، ویدیو تست محصول انتخابی شما را ارسال می‌کنند.</p>
         </div>
       </div>
+
+      <div>
+        <button onClick={() => toggle(6)} className="w-full flex justify-between items-center py-4 text-left font-bold text-[14px] md:text-[16px] lg:text-[18px]">آیا ساعت‌ها ضد آب هستند؟{openIndex === 6 ? <FiChevronUp className="text-gray-500" /> : <FiChevronDown className="text-gray-500" />}</button>
+        <div className={`overflow-hidden transition-all duration-300 text-gray-600 ${openIndex === 6 ? 'max-h-96 py-2' : 'max-h-0'}`}>
+          <p className='text-[12px] md:text-[14px] lg:text-[16px] w-[95%]'>بیشتر ساعت‌های موجود دارای مقاومت در برابر آب هستند، اما میزان مقاومت بسته به مدل متفاوت است. توصیه می‌شود پیش از استفاده در استخر یا دوش، مشخصات فنی محصول را بررسی کنید.</p>
+        </div>
+      </div>
+
+      <div>
+        <button onClick={() => toggle(7)} className="w-full flex justify-between items-center py-4 text-left font-bold text-[14px] md:text-[16px] lg:text-[18px]">آیا باتری ساعت‌ها قابل تعویض است؟{openIndex === 7 ? <FiChevronUp className="text-gray-500" /> : <FiChevronDown className="text-gray-500" />}</button>
+        <div className={`overflow-hidden transition-all duration-300 text-gray-600 ${openIndex === 7 ? 'max-h-96 py-2' : 'max-h-0'}`}>
+          <p className='text-[12px] md:text-[14px] lg:text-[16px] w-[95%]'>بله، باتری تمام ساعت‌های کوارتز قابل تعویض است و در صورت نیاز می‌توانید به نمایندگی‌های معتبر یا ساعت‌سازی‌های مجاز مراجعه کنید.</p>
+        </div>
+      </div>
+
     </div>
   );
 }
