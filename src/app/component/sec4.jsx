@@ -21,9 +21,9 @@ export default function Sec4() {
   }, []);
 
   return (
-    <section className='mt-10 mx-[5%] relative'>
+    <section className='mt-3 md:mt-4 lg:mt-6 mx-[5%] relative'>
       <h2 className='text-base sm:text-lg md:text-xl font-bold text-black/80 text-right'>محصولات لاکچری زمان ایران</h2>
-      <div className='relative mt-4'>
+      <div className='relative mt-1.5 md:mt-2'>
         <Swiper
           modules={[Navigation]}
           navigation={{
