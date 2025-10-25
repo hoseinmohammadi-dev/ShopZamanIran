@@ -27,7 +27,7 @@ export default function basket() {
                         <p className='text-[10px] md:text-[12px] lg:text-[14px] text-black/60'>میتواند برای مشاهده محصولات بیشتر به صفحات زیر بروید:</p>
                         <div className='flex gap-1 mb-5 mt-1.5 md:mt-3'>
                             <Link href="/shop">
-                                <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1 md:py-1.5 lg:py-2 px-1.5 md:px-3 lg:px-4 rounded-xl hover:bg-gray-800 transition-all shadow-lg mr-2 md:mr-5">فروشگاه زمان ایران</button>
+                                <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1 md:py-1.5 lg:py-2 px-1.5 md:px-3 lg:px-4 rounded-xl hover:bg-gray-800 transition-all shadow-lg mr-2 md:mr-5">صفحه فروشگاه</button>
                             </Link>
                             <Link href="/">
                                 <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1 md:py-1.5 lg:py-2 px-1.5 md:px-3 lg:px-4 rounded-xl hover:bg-gray-800 transition-all shadow-lg mr-2 md:mr-5">صفحه نخست</button>
