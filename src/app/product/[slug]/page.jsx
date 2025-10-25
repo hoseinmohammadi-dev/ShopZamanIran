@@ -1,5 +1,6 @@
 'use client';
 
+import Sec4 from "@/app/component/sec4";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -38,7 +39,7 @@ export default function productPage() {
     if (error) return <div className="text-center mt-10 text-red-600">{error}</div>;
 
     return (
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto  py-10">
 
             <div className="mx-[5%] flex text-black/60 text-[12px] md:text-[14px]">
                 <Link href="/">صفحه اصلی</Link>
@@ -52,7 +53,7 @@ export default function productPage() {
                 <h2 className="text-[20px] md:text-[30px] lg:text-[36px]">جزئیات محصول</h2>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-10 items-center md:items-start">
+            <div className="mx-[5%] flex flex-col md:flex-row gap-10 items-center md:items-start">
                 <div className="w-full md:w-1/3 flex justify-center">
                     <Image src={product.image} alt={product.title} width={400} height={400} className="rounded-2xl shadow-lg object-cover" />
                 </div>
@@ -71,9 +72,12 @@ export default function productPage() {
                         <Image src="/icon/toman.svg" alt="Toman" width={20} height={20} className="object-contain" />
                     </div>
 
-                    <button className="bg-black text-white text-[14px] md:text-[16px] py-1.5 md:py-2 lg:py-3 px-2 md:px-4 lg:px-6 rounded-xl hover:bg-gray-800 transition-all">افزودن به سبد خرید 🛒</button>
+                    <button className="bg-black text-white text-[14px] md:text-[16px] py-1.5 md:py-2 lg:py-3 px-2 md:px-4 lg:px-6 rounded-xl hover:bg-gray-800 transition-all">🛒 افزودن به سبد خرید</button>
+
                 </div>
             </div>
+                    <div className="w-full h-[3px] md:h-[4px] lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
+                    <Sec4/>
         </section>
     );
 }
