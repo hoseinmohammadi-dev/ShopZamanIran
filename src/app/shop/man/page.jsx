@@ -1,6 +1,5 @@
 import Link from "next/link";
 import getData from "../../services/getData"
-import SearchBox from "../../component/Search"
 import Image from "next/image"
 
 export default async function page() {
@@ -21,7 +20,6 @@ export default async function page() {
             {/* sec2 title */}
             <div className="mx-[5%] flex justify-between mt-2.5 lg:mt-4 mb-3 md:mb-5" >
                 <h2 className="text-[20px] md:text-[30px] lg:text-[36px]">فروشگاه مردانه</h2>
-                <SearchBox />
             </div>
 
             {/* sec3 Products page */}
