@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import useShop from "@/app/store/store";
+
 
 export default function productPage() {
     const params = useParams();
@@ -13,6 +15,7 @@ export default function productPage() {
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const { updateBasket } = useShop()
 
     useEffect(() => {
         const fechProduct = async () => {
@@ -37,6 +40,16 @@ export default function productPage() {
 
     if (loading) return <div className="text-center mt-10 min-h-screen">در حال بارگذاری...</div>;
     if (error) return <div className="text-center mt-10 text-red-600">{error}</div>;
+
+
+
+    // store start
+    const para = () => {
+        updateBasket(product)
+    }
+    // store end
+
+
 
     return (
         <section className="container mx-auto py-10">
@@ -68,16 +81,19 @@ export default function productPage() {
                     </p>
 
                     <div className="flex items-center justify-start gap-1 mb-6 md:mb-3 lg:mb-6">
-                        <p className="text-xl font-bold text-gray-800 font-[YekanBakhFa]">{product.price}</p>
-                        <Image src="/icon/toman.svg" alt="Toman" width={20} height={20} className="object-contain" />
+                        <p className="text-lg md:text-2xl font-bold text-gray-800 font-[YekanBakhFa]!">{product.price}</p>
+                        <Image src="/icon/toman.svg" alt="Toman" width={25} height={25} className="object-contain" />
                     </div>
 
-                    <button className="bg-black text-white text-[14px] md:text-[16px] py-1.5 md:py-2 lg:py-3 px-2 md:px-4 lg:px-6 rounded-xl hover:bg-gray-800 transition-all">🛒 افزودن به سبد خرید</button>
+                    <button onClick={para} className="bg-black text-white text-[14px] md:text-[16px] py-1.5 md:py-2 lg:py-3 px-2 md:px-4 lg:px-6 rounded-xl hover:bg-gray-800 transition-all">🛒 افزودن به سبد خرید</button>
+                    <Link href="/basket">
+                    <button className="bg-white text-black hover:text-white text-[14px] md:text-[16px] py-1.5 md:py-2 lg:py-3 px-2 md:px-4 lg:px-6 rounded-xl hover:bg-gray-800 transition-all shadow-lg mr-2 md:mr-5">مشاهده سبد خرید</button>
+                    </Link>
 
                 </div>
             </div>
-                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
-                    <Sec4/>
+            <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
+            <Sec4 />
         </section>
     );
 }

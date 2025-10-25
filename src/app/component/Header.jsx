@@ -29,10 +29,12 @@ export default function Header() {
         </div>
 
         {/* basket */}
-        <div className='hidden md:flex gap-1 text-black bg-stone-100 px-4 py-1 rounded-sm'>
-          <img className='w-5 ml-2' src="/icon/basket.svg" alt="" />
-          <p>سبد خرید</p>
-        </div>
+        <Link href="/basket">
+          <div className='hidden md:flex gap-1 text-black bg-stone-100 px-4 py-1 rounded-sm'>
+            <img className='w-5 ml-2' src="/icon/basket.svg" alt="" />
+            <p>سبد خرید</p>
+          </div>
+        </Link>
       </div>
 
       {/* mobile menu overlay and dropdown */}
@@ -47,7 +49,7 @@ export default function Header() {
             <Link href="/shop" onClick={() => setOpen(false)}>فروشگاه</Link>
             <Link href="/faq" onClick={() => setOpen(false)}>سوالات متداول</Link>
             <Link href="/articles" onClick={() => setOpen(false)}>مقالات</Link>
-            <Link className='flex text-black bg-stone-200 px-4 py-1 rounded-sm' href="" onClick={() => setOpen(false)}>
+            <Link className='flex text-black bg-stone-200 px-4 py-1 rounded-sm' href="/basket" onClick={() => setOpen(false)}>
               <img className='w-5 ml-2' src="/icon/basket.svg" alt="" />
               <p>سبد خرید</p>
             </Link>

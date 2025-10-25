@@ -32,10 +32,10 @@ export default function ClientStore({ initialData }) {
             </p>
 
             <div className='flex justify-center items-end gap-1 mt-2 md:mt-3'>
-              <p className='text-[10px] sm:text-[12px] md:text-[14px] font-bold text-gray-700 font-[YekanBakhFa]'>
+              <p className='text-[12px] sm:text-[14px] md:text-[16px] font-bold text-gray-700 font-[YekanBakhFa]!'>
                 {val.price}
               </p>
-              <Image src='/icon/toman.svg' alt="Toman" width={20} height={20} className='object-contain' />
+              <Image src='/icon/toman.svg' alt="Toman" width={25} height={25} className='object-contain' />
             </div>
           </Link>
         ))}
