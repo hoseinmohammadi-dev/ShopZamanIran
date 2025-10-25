@@ -7,6 +7,7 @@ import { Navigation } from 'swiper';
 import getData from './../services/getData';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Sec4() {
   const [data, setData] = useState([]);
@@ -42,18 +43,20 @@ export default function Sec4() {
         >
           {data && data.slice(16, 24).map((val) => (
             <SwiperSlide key={val.refCode}>
-              <div className='flex flex-col justify-between items-center bg-white rounded-2xl min-w-[130px] max-w-[180px] sm:max-w-[220px] md:max-w-60 min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
-                <div className='w-full aspect-square flex justify-center items-center'>
-                  <img src={val.image} alt={val.title} className='rounded-xl object-cover w-full h-full' />
-                </div>
+              <Link href={`/product/${val.refCode}`}>
+                <div className='flex flex-col justify-between items-center bg-white rounded-2xl min-w-[130px] max-w-[180px] sm:max-w-[220px] md:max-w-60 min-h-[220px] sm:min-h-[260px] md:min-h-[300px] p-2 sm:p-3 hover:shadow-lg transition-all duration-300'>
+                  <div className='w-full aspect-square flex justify-center items-center'>
+                    <img src={val.image} alt={val.title} className='rounded-xl object-cover w-full h-full' />
+                  </div>
 
-                <p className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center mt-2 font-medium text-black/80 line-clamp-2'>{val.title}</p>
+                  <p className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center mt-2 font-medium text-black/80 line-clamp-2'>{val.title}</p>
 
-                <div className='flex gap-1 mt-2 md:mt-3'>
-                  <p className='text-[10px] sm:text-[12px] md:text-[14px] font-bold text-gray-700 font-[YekanBakhFa]!'>{val.price}</p>
-                  <Image src='/icon/toman.svg' alt="Toman" width={20} height={20} className='w-3 sm:w-4 object-contain' />
+                  <div className='flex gap-1 mt-2 md:mt-3'>
+                    <p className='text-[10px] sm:text-[12px] md:text-[14px] font-bold text-gray-700 font-[YekanBakhFa]!'>{val.price}</p>
+                    <Image src='/icon/toman.svg' alt="Toman" width={20} height={20} className='w-3 sm:w-4 object-contain' />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
