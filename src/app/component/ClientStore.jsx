@@ -17,7 +17,7 @@ export default function ClientStore({ initialData }) {
 
             <div className="mx-[5%] flex justify-between mt-2.5 lg:mt-4 mb-3 md:mb-5" >
                 <h2 className="text-[20px] md:text-[30px] lg:text-[36px]">فروشگاه</h2>
-                <SearchBox setProducts={setProducts} />
+                <SearchBox setProducts={setProducts} initialProducts={products} />
             </div>
 
             <div className="mx-[2%] md:mx-[5%] flex flex-wrap justify-center lg:justify-between gap-5">
