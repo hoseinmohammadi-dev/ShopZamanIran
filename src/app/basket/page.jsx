@@ -23,14 +23,14 @@ export default function basket() {
                 <div className='mx-[4%] flex justify-center'>
                     <div className='w-full bg-stone-200 rounded-4xl relative flex flex-col items-center'>
                         <Image src="/image/basket.svg" alt="pic" width={0} height={0} className='relative -top-6 left-0 rounded-xl object-cover w-[80%] max-w-[300px]' />
-                        <p className='text-[16px] sm:text-[16px] md:text-[20px] lg:text-[22px] text-red-600/90 font-bold'>سبد خرید شما خالیست</p>
+                        <p className='text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] text-red-600/90 font-bold'>سبد خرید شما خالیست</p>
                         <p className='text-[12px] sm:text-[14px] md:text-[16px] text-black/45'>میتواند برای مشاهده محصولات بیشتر به صفحات زیر بروید:</p>
                         <div className='flex gap-1 mb-5 mt-1.5 md:mt-3'>
                             <Link href="/shop">
-                                <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1 md:py-1.5 lg:py-2 px-1.5 md:px-3 lg:px-4 rounded-xl hover:bg-gray-800 transition-all shadow-lg mr-2 md:mr-5">صفحه فروشگاه</button>
+                                <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1.5 md:py-2 lg:py-2.5 px-3 sm:px-3.5 md:px-4 lg:px-5 rounded-xl hover:bg-gray-800 transition-all shadow-md">صفحه فروشگاه</button>
                             </Link>
                             <Link href="/">
-                                <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1 md:py-1.5 lg:py-2 px-1.5 md:px-3 lg:px-4 rounded-xl hover:bg-gray-800 transition-all shadow-lg mr-2 md:mr-5">صفحه نخست</button>
+                                <button className="bg-white text-black hover:text-white text-[12px] md:text-[16px] py-1.5 md:py-2 lg:py-2.5 px-3 sm:px-3.5 md:px-4 lg:px-5 rounded-xl hover:bg-gray-800 transition-all shadow-md">صفحه نخست</button>
                             </Link>
                         </div>
                     </div>
