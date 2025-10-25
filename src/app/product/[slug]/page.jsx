@@ -35,11 +35,11 @@ export default function productPage() {
         if (slug) fechProduct();
     }, [slug])
 
-    if (loading) return <div className="text-center mt-10">در حال بارگذاری...</div>;
+    if (loading) return <div className="text-center mt-10 min-h-screen">در حال بارگذاری...</div>;
     if (error) return <div className="text-center mt-10 text-red-600">{error}</div>;
 
     return (
-        <section className="container mx-auto  py-10">
+        <section className="container mx-auto py-10">
 
             <div className="mx-[5%] flex text-black/60 text-[12px] md:text-[14px]">
                 <Link href="/">صفحه اصلی</Link>
@@ -76,7 +76,7 @@ export default function productPage() {
 
                 </div>
             </div>
-                    <div className="w-full h-[3px] md:h-[4px] lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
+                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
                     <Sec4/>
         </section>
     );
