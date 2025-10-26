@@ -7,6 +7,14 @@ import { AiOutlineDelete } from "react-icons/ai";
 export default function Basket() {
     const { basket, removeFromBasket, increaseCount, decreaseCount } = useShop()
     const isEmpty = basket.length === 0
+    const totalItems = basket.reduce((acc, item) => acc + item.count, 0)
+
+    const totalPrice = basket.reduce((acc, item) => {
+        const priceNumber = Number(item.price.replace(/,/g, ''))
+        return acc + priceNumber * item.count
+    }, 0)
+
+
 
     return (
         <section className="container mx-auto">
@@ -35,7 +43,8 @@ export default function Basket() {
                 </div>
             ) : (
                 <section className="hidden md:block container mx-auto px-[5%] mt-8">
-                    <div className="overflow-x-auto border border-black/30 rounded-2xl shadow-sm">
+
+                    <div className="overflow-x-hidden border border-black/30 rounded-2xl shadow-sm">
                         <table className="w-full text-sm md:text-base text-right border-collapse">
                             <thead className="bg-white text-gray-700 border-b border-black/30">
                                 <tr>
@@ -53,12 +62,12 @@ export default function Basket() {
                             </thead>
                             <tbody>
                                 {basket.map((item) => (
-                                    <tr key={item.refCode} className="border-b border-black/30 last:border-none bg-white transition-colors">
+                                    <tr key={item.refCode} className="border-b border-black/30 last:border-none bg-stone-50 transition-colors">
                                         {/* محصول */}
                                         <td className="p-3">
                                             <div className="flex items-center justify-start gap-2">
                                                 <Image src={item.image} alt={item.title} width={80} height={80} className="rounded-lg border object-cover shrink-0" />
-                                                <p className="font-medium text-gray-800 text-base leading-tight w-[75%] ">{item.title}</p>
+                                                <p className="font-medium text-gray-800 text-[14px] leading-tight w-[75%] ">{item.title}</p>
                                             </div>
                                         </td>
 
@@ -100,6 +109,50 @@ export default function Basket() {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+
+                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
+
+                    <div className="*:mb-2 text-[18px] font-bold">
+                        <div className="flex justify-between">
+                            <div className="flex gap-1">
+                                <p>قیمت</p>
+                                <p className="font-[yekanBakhFa]!">{(totalItems)}</p>
+                                <p>کالا</p>
+                            </div>
+                            <p className="font-[yekanBakhFa]!">
+                                {totalPrice.toLocaleString()} تومان
+                            </p>
+                        </div>
+                        <div className="flex justify-between">
+                            <p>موجودی کیف پول :</p>
+                            <p className="font-[yekanBakhFa]!">0 تومان</p>
+                        </div>
+                        <div className="flex justify-between">
+                            <p>کد تخفیف :</p>
+                            <input type="text" placeholder="کد تخفیف خود را در اینجا وارد کنید" className="w-[25%] h-4 bg-stone-50 text-[14px] text-black/50 font-medium p-3 outline-0 border border-black/50 rounded-lg" />
+                        </div>
+                        <div className="flex justify-between">
+                            <div className="flex gap-1">
+                                <p>قیمت</p>
+                                <p className="font-[yekanBakhFa]!">{(totalItems)}</p>
+                                <p>کالا با اعمال کد تخفیف :</p>
+                            </div>
+                            <p className="font-[yekanBakhFa]!">
+                                {totalPrice.toLocaleString()} تومان
+                            </p>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            <p>هزینه ارسال :</p>
+                            <div className="w-75 bg-white p-3 text-[12px] text-blue-600 text-center rounded-2xl">
+                                <p>هزینه‌ی ارسال در ادامه بر اساس آدرس، زمان و نحوه‌ی ارسال انتخابی شما‌ محاسبه و به این مبلغ اضافه خواهد شد</p>
+                            </div>
+                        </div>
+                        <div className="flex justify-center">
+                            <div className="w-[70%] bg-red-600 p-3 text-[16px] text-white text-shadow-lg text-center rounded-2xl">
+                                <p>اقدام به پرداخت</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             )}
