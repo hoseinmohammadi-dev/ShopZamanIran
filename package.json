@@ -12,6 +12,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
+    "react-toastify": "^11.0.5",
     "swiper": "^8.4.7",
     "tailwind-scrollbar-hide": "^4.0.0",
     "zustand": "^5.0.8"

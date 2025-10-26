@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: "YekanBakhFa";
   src: url("/fonts/YekanBakhNoEn-Regular.woff2") format("woff2");
@@ -49,4 +48,34 @@ body {
 * {
   font-family: inherit;
   font-variant-numeric: normal;
+}
+
+.Toastify__toast {
+  font-family: "YekanBakhEn" !important;
+  font-size: 14px;
+}
+
+.Toastify__toast--success {
+  right: 10px !important;
+  width: 250px !important;
+  background-color: #4caf50;
+  color: white;
+  font-family: 'Vazirmatn', sans-serif;
+  font-weight: 500;
+}
+
+.Toastify__toast--error {
+  width: 250px !important;
+  background-color: #f44336;
+  color: white;
+  font-family: 'Vazirmatn', sans-serif;
+  font-weight: 500;
+}
+
+@media (min-width:768px) {
+  .Toastify__toast-container {
+    left: auto !important;
+    right: 40px !important;
+    top: 110px !important
+  }
 }

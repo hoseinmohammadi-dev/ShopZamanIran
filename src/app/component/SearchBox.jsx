@@ -8,6 +8,7 @@ export default function SearchBox({ setProducts, initialProducts }) {
     const [query, setQuery] = useState('');
     const [notFound, setNotFound] = useState(false)
 
+
     const handleSearch = async () => {
         if (!query.trim()) {
             setProducts(initialProducts);
@@ -48,9 +49,9 @@ export default function SearchBox({ setProducts, initialProducts }) {
             <button onClick={handleSearch}>
                 <FiSearch className='w-3 h-3 md:w-5 md:h-5' />
             </button>
-            <div className={`absolute -top-[120%] left-1.5 md:top-2 md:left-[110%] flex flex-nowrap items-center justify-center gap-1.5 md:w-[155px] z-10 bg-red-500 text-white text-[10px] md:text-[14px] px-1.5 md:px-3 py-1 md:py-2 mt-2 md:mt-0 rounded-lg transition-all duration-500 ${notFound ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`fixed top-24 right-4 z-50 flex items-center gap-2 bg-red-500 text-white text-[10px] md:text-[14px] px-3 py-2 rounded-lg shadow-lg transition-all duration-300 ${notFound ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'}`}>
                 <p>محصولی یافت نشد</p>
-                <CiFaceFrown className='text-[12px] md:text-[22px]'/>
+                <CiFaceFrown className='text-[12px] md:text-[22px]' />
             </div>
         </div>
     );
