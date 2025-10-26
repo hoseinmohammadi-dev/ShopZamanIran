@@ -58,18 +58,10 @@ body {
 .Toastify__toast--success {
   right: 10px !important;
   width: 250px !important;
-  background-color: #4caf50;
-  color: white;
-  font-family: 'Vazirmatn', sans-serif;
-  font-weight: 500;
 }
 
 .Toastify__toast--error {
   width: 250px !important;
-  background-color: #f44336;
-  color: white;
-  font-family: 'Vazirmatn', sans-serif;
-  font-weight: 500;
 }
 
 @media (min-width:768px) {
