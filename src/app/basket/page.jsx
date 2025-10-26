@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import useShop from "../store/store"
+import { AiOutlineDelete } from "react-icons/ai";
 
 export default function Basket() {
     const { basket, removeFromBasket, increaseCount, decreaseCount } = useShop()
@@ -36,10 +37,10 @@ export default function Basket() {
                 <section className="hidden md:block container mx-auto px-[5%] mt-8">
                     <div className="overflow-x-auto border border-black/30 rounded-2xl shadow-sm">
                         <table className="w-full text-sm md:text-base text-right border-collapse">
-                            <thead className="bg-gray-100 text-gray-700 border-b border-black/30">
+                            <thead className="bg-white text-gray-700 border-b border-black/30">
                                 <tr>
                                     <th className="py-3 px-4 text-right font-medium w-1/2">
-                                        <p className="flex justify-start">محصول</p>
+                                        <p className="flex justify-center">محصول</p>
                                     </th>
                                     <th className="py-3 px-4 text-right font-medium">
                                         <p className="flex justify-center">قیمت</p>
@@ -52,7 +53,7 @@ export default function Basket() {
                             </thead>
                             <tbody>
                                 {basket.map((item) => (
-                                    <tr key={item.refCode} className="border-b border-black/30 last:border-none hover:bg-gray-50 transition-colors">
+                                    <tr key={item.refCode} className="border-b border-black/30 last:border-none bg-white transition-colors">
                                         {/* محصول */}
                                         <td className="p-3">
                                             <div className="flex items-center justify-start gap-2">
@@ -64,25 +65,37 @@ export default function Basket() {
                                         {/* قیمت */}
                                         <td className="p-3 text-gray-700 font-[yekanBakhFa]! whitespace-nowrap">
                                             <div className="flex justify-center">
-                                            {item.price.toLocaleString()} تومان
+                                                {item.price.toLocaleString()} تومان
                                             </div>
                                         </td>
 
                                         {/* تعداد */}
                                         <td className="p-3">
-                                            <div className="max-w-[81px]! mx-auto flex justify-center items-center border border-black/30 rounded-md overflow-hidden text-sm">
-                                                <button onClick={() => increaseCount(item.id)} className="px-2 py-0.5 hover:bg-gray-200 transition text-base"> + </button>
-                                                <span className="px-3 text-[13px]">{item.count}</span>
-                                                <button onClick={() => decreaseCount(item.id)} className="px-2 py-0.5 hover:bg-gray-200 transition text-base"> – </button>
+                                            <div className="max-w-[100px]! flex justify-center items-center border border-black/30 rounded-md overflow-hidden text-sm">
+                                                <button onClick={() => increaseCount(item.id)} className="px-2 py-0.5 cursor-pointer transition text-[20px] m-auto">
+                                                    +
+                                                </button>
+                                                <span className="px-3 text-[14px]">{item.count}</span>
+                                                <button
+                                                    onClick={() => {
+                                                        if (item.count > 1) {
+                                                            decreaseCount(item.id)
+                                                        } else {
+                                                            removeFromBasket(item.id)
+                                                        }
+                                                    }}
+                                                    className="px-2 py-0.5 cursor-pointer transition text-base text-[20px] m-auto"
+                                                >
+                                                    {item.count > 1 ? ("-") : (<AiOutlineDelete size={15} className="text-red-600" />)}
+                                                </button>
                                             </div>
                                         </td>
 
                                         <td className="p-3 text-gray-700 font-[yekanBakhFa]! whitespace-nowrap">
                                             <div className="flex justify-center">
-                                            {(Number(item.price.replace(/,/g, '')) * item.count).toLocaleString()} تومان
+                                                {(Number(item.price.replace(/,/g, '')) * item.count).toLocaleString()} تومان
                                             </div>
                                         </td>
-
                                     </tr>
                                 ))}
                             </tbody>
