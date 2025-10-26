@@ -111,10 +111,10 @@ export default function Basket() {
                         </table>
                     </div>
 
-                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
+                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"/>
 
                     <div className="*:mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-bold">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
                             <div className="flex gap-1">
                                 <p>قیمت</p>
                                 <p className="font-[yekanBakhFa]!">{(totalItems)}</p>
@@ -124,15 +124,15 @@ export default function Basket() {
                                 {totalPrice.toLocaleString()} تومان
                             </p>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
                             <p>موجودی کیف پول :</p>
                             <p className="font-[yekanBakhFa]!">0 تومان</p>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
                             <p>کد تخفیف :</p>
-                            <input type="text" placeholder="کد تخفیف خود را در اینجا وارد کنید" className="w-[57%] md:w-[33%] lg:w-[25%] h-4 bg-stone-50 text-[10px] md:text-[12px] lg:text-[14px] text-black/50 font-medium p-3 outline-0 border border-black/50 rounded-lg text-center" />
+                            <input type="text" placeholder="کد تخفیف خود را در اینجا وارد کنید" className="w-[57%] md:w-[33%] lg:w-[25%] h-4 bg-stone-50 text-[10px] md:text-[12px] lg:text-[14px] text-black/50 font-medium p-3 outline-0 border border-black/30 rounded-lg text-center" />
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
                             <div className="flex gap-1">
                                 <p>قیمت</p>
                                 <p className="font-[yekanBakhFa]!">{(totalItems)}</p>
@@ -142,7 +142,7 @@ export default function Basket() {
                                 {totalPrice.toLocaleString()} تومان
                             </p>
                         </div>
-                        <div className="flex justify-between items-center">
+                        <div className="flex justify-between items-center border border-t-0  border-black/30 p-2 rounded-xl mb-2">
                             <p>هزینه ارسال :</p>
                             <div className="w-45 md:w-60 lg:w-75 bg-white p-1.5 md:p-2 lg:p-3 text-[8px] md:text-[10px] lg:text-[12px] text-blue-600 text-center rounded-2xl">
                                 <p>هزینه‌ی ارسال در ادامه بر اساس آدرس، زمان و نحوه‌ی ارسال انتخابی شما‌ محاسبه و به این مبلغ اضافه خواهد شد</p>
@@ -150,7 +150,7 @@ export default function Basket() {
                         </div>
                         <div className="flex justify-center">
                             <div className="w-[70%] bg-red-600 p-3 text-[16px] text-white text-shadow-lg text-center rounded-2xl">
-                                <p>اقدام به پرداخت</p>
+                                <p>مرحله بعدی</p>
                             </div>
                         </div>
                     </div>
