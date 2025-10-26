@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import useShop from "../store/store"
 import { AiOutlineDelete } from "react-icons/ai";
+import { IoStorefrontOutline } from "react-icons/io5";
 
 export default function Basket() {
     const { basket, removeFromBasket, increaseCount, decreaseCount } = useShop()
@@ -44,7 +45,7 @@ export default function Basket() {
             ) : (
                 <section className="container mx-auto px-[5%] mt-8">
 
-                    <div className="overflow-x-hidden border border-black/30 rounded-2xl shadow-sm">
+                    <div className="hidden md:block overflow-x-hidden border border-black/30 rounded-2xl shadow-sm">
                         <table className="w-full text-sm md:text-base text-right border-collapse">
                             <thead className="bg-white text-gray-700 border-b border-black/30">
                                 <tr>
@@ -111,7 +112,55 @@ export default function Basket() {
                         </table>
                     </div>
 
-                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"/>
+                    <div className="block md:hidden ">
+                        {basket.map((item) => {
+                            return (
+                                <section key={item.id} className=" p-2 rounded-2xl bg-white mb-2">
+                                    <div className="flex">
+                                        <Image src={item.image} width="100" height="100" alt={item.title} />
+                                        <div>
+                                            <p className="w-[200px] font-bold text-[14px] mt-[3px] text-right">{item.title}</p>
+                                            <p className="text-[12px] text-black/60 mt-2">گارانتی : گارانتی دوساله پوزیترون</p>
+                                            <div className="flex gap-1 text-[12px] text-black/60 mt-2">
+                                            <IoStorefrontOutline />
+                                            <p>فروشگاه اینترنتی زمان ایران</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13" />
+                                    <div className="flex justify-between">
+
+                                        <div className="max-w-[100px]! flex justify-center items-center border border-black/30 rounded-md overflow-hidden text-sm">
+                                            <button onClick={() => increaseCount(item.id)} className="px-2 cursor-pointer transition text-[20px] m-auto">
+                                                +
+                                            </button>
+                                            <span className="px-3 text-[14px]">{item.count}</span>
+                                            <button
+                                                onClick={() => {
+                                                    if (item.count > 1) {
+                                                        decreaseCount(item.id)
+                                                    } else {
+                                                        removeFromBasket(item.id)
+                                                    }
+                                                }}
+                                                className="px-2 cursor-pointer transition text-base text-[20px] m-auto"
+                                            >
+                                                {item.count > 1 ? ("-") : (<AiOutlineDelete size={15} className="text-red-600" />)}
+                                            </button>
+                                        </div>
+
+                                        <div className="p-3 text-gray-700 font-[yekanBakhFa]! whitespace-nowrap text-[16px]">
+                                            <div className="flex justify-center">
+                                                {(Number(item.price.replace(/,/g, '')) * item.count).toLocaleString()} تومان
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            )
+                        })}
+                    </div>
+
+                    <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13" />
 
                     <div className="*:mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-bold">
                         <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
