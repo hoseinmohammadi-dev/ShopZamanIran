@@ -4,18 +4,31 @@ import Link from "next/link"
 import useShop from "../store/store"
 import { AiOutlineDelete } from "react-icons/ai";
 import { IoStorefrontOutline } from "react-icons/io5";
+import { useEffect, useState } from "react";
 
 export default function Basket() {
     const { basket, removeFromBasket, increaseCount, decreaseCount } = useShop()
+    const [isLoaded, setIsLoaded] = useState(false);
     const isEmpty = basket.length === 0
     const totalItems = basket.reduce((acc, item) => acc + item.count, 0)
+
 
     const totalPrice = basket.reduce((acc, item) => {
         const priceNumber = Number(item.price.replace(/,/g, ''))
         return acc + priceNumber * item.count
     }, 0)
 
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
 
+    if (!isLoaded) {
+        return (
+            <div className="flex items-center justify-center min-h-[70vh]">
+                <p className="text-lg font-semibold text-gray-500">در حال بارگذاری...</p>
+            </div>
+        );
+    }
 
     return (
         <section className="container mx-auto">
@@ -122,8 +135,8 @@ export default function Basket() {
                                             <p className="w-[200px] font-bold text-[14px] mt-[3px] text-right">{item.title}</p>
                                             <p className="text-[12px] text-black/60 mt-2">گارانتی : گارانتی دوساله پوزیترون</p>
                                             <div className="flex gap-1 text-[12px] text-black/60 mt-2">
-                                            <IoStorefrontOutline />
-                                            <p>فروشگاه اینترنتی زمان ایران</p>
+                                                <IoStorefrontOutline />
+                                                <p>فروشگاه اینترنتی زمان ایران</p>
                                             </div>
                                         </div>
                                     </div>
