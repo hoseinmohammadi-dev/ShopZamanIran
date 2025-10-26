@@ -42,7 +42,7 @@ export default function Basket() {
                     </div>
                 </div>
             ) : (
-                <section className="hidden md:block container mx-auto px-[5%] mt-8">
+                <section className="container mx-auto px-[5%] mt-8">
 
                     <div className="overflow-x-hidden border border-black/30 rounded-2xl shadow-sm">
                         <table className="w-full text-sm md:text-base text-right border-collapse">
@@ -113,7 +113,7 @@ export default function Basket() {
 
                     <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13"></div>
 
-                    <div className="*:mb-2 text-[18px] font-bold">
+                    <div className="*:mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-bold">
                         <div className="flex justify-between">
                             <div className="flex gap-1">
                                 <p>قیمت</p>
@@ -130,7 +130,7 @@ export default function Basket() {
                         </div>
                         <div className="flex justify-between">
                             <p>کد تخفیف :</p>
-                            <input type="text" placeholder="کد تخفیف خود را در اینجا وارد کنید" className="w-[25%] h-4 bg-stone-50 text-[14px] text-black/50 font-medium p-3 outline-0 border border-black/50 rounded-lg" />
+                            <input type="text" placeholder="کد تخفیف خود را در اینجا وارد کنید" className="w-[57%] md:w-[33%] lg:w-[25%] h-4 bg-stone-50 text-[10px] md:text-[12px] lg:text-[14px] text-black/50 font-medium p-3 outline-0 border border-black/50 rounded-lg text-center" />
                         </div>
                         <div className="flex justify-between">
                             <div className="flex gap-1">
@@ -144,7 +144,7 @@ export default function Basket() {
                         </div>
                         <div className="flex justify-between items-center">
                             <p>هزینه ارسال :</p>
-                            <div className="w-75 bg-white p-3 text-[12px] text-blue-600 text-center rounded-2xl">
+                            <div className="w-45 md:w-60 lg:w-75 bg-white p-1.5 md:p-2 lg:p-3 text-[8px] md:text-[10px] lg:text-[12px] text-blue-600 text-center rounded-2xl">
                                 <p>هزینه‌ی ارسال در ادامه بر اساس آدرس، زمان و نحوه‌ی ارسال انتخابی شما‌ محاسبه و به این مبلغ اضافه خواهد شد</p>
                             </div>
                         </div>
