@@ -25,7 +25,7 @@ export default function Basket() {
     if (!isLoaded) {
         return (
             <div className="flex items-center justify-center min-h-[70vh]">
-                <p className="text-lg font-semibold text-gray-500">در حال بارگذاری...</p>
+                <p className="text-lg font-semibold text-gray-500">درحال بارگزاری ...</p>
             </div>
         );
     }
@@ -77,7 +77,6 @@ export default function Basket() {
                             <tbody>
                                 {basket.map((item) => (
                                     <tr key={item.refCode} className="border-b border-black/30 last:border-none bg-stone-50 transition-colors">
-                                        {/* محصول */}
                                         <td className="p-3">
                                             <div className="flex items-center justify-start gap-2">
                                                 <Image src={item.image} alt={item.title} width={80} height={80} className="rounded-lg border object-cover shrink-0" />
@@ -85,14 +84,12 @@ export default function Basket() {
                                             </div>
                                         </td>
 
-                                        {/* قیمت */}
                                         <td className="p-3 text-gray-700 font-[yekanBakhFa]! whitespace-nowrap">
                                             <div className="flex justify-center">
                                                 {item.price.toLocaleString()} تومان
                                             </div>
                                         </td>
 
-                                        {/* تعداد */}
                                         <td className="p-3">
                                             <div className="max-w-[100px]! flex justify-center items-center border border-black/30 rounded-md overflow-hidden text-sm">
                                                 <button onClick={() => increaseCount(item.id)} className="px-2 py-0.5 cursor-pointer transition text-[20px] m-auto">
@@ -129,12 +126,12 @@ export default function Basket() {
                         {basket.map((item) => {
                             return (
                                 <section key={item.id} className=" p-2 rounded-2xl bg-white mb-2">
-                                    <div className="flex">
+                                    <div className="flex gap-1">
                                         <Image src={item.image} width="100" height="100" alt={item.title} />
                                         <div>
-                                            <p className="w-[200px] font-bold text-[14px] mt-[3px] text-right">{item.title}</p>
-                                            <p className="text-[12px] text-black/60 mt-2">گارانتی : گارانتی دوساله پوزیترون</p>
-                                            <div className="flex gap-1 text-[12px] text-black/60 mt-2">
+                                            <p className="w-[180px] font-bold text-[12px] sm:text-[14px] mt-[3px] text-right">{item.title}</p>
+                                            <p className="text-[10px] sm:text-[12px] text-black/60 mt-2">گارانتی : گارانتی دوساله پوزیترون</p>
+                                            <div className="flex gap-1 text-[10px] sm:text-[12px] text-black/60 mt-2">
                                                 <IoStorefrontOutline />
                                                 <p>فروشگاه اینترنتی زمان ایران</p>
                                             </div>
