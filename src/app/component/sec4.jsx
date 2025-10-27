@@ -52,8 +52,8 @@ export default function Sec4() {
                   <p className='text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-center mt-2 font-medium text-black/80 line-clamp-2'>{val.title}</p>
 
                   <div className='flex gap-1 mt-2 md:mt-3'>
-                    <p className='text-[10px] sm:text-[12px] md:text-[14px] font-bold text-gray-700 font-[YekanBakhFa]!'>{val.price}</p>
-                    <Image src='/icon/toman.svg' alt="Toman" width={20} height={20} className='w-3 sm:w-4 object-contain' />
+                    <p className='text-[12px] sm:text-[14px] md:text-[16px] font-bold text-gray-700 font-[YekanBakhFa]!'>{val.price}</p>
+                    <Image src='/icon/toman.svg' alt="Toman" width={20} height={20} className='object-contain' />
                   </div>
                 </div>
               </Link>
