@@ -63,7 +63,7 @@ export default function Basket() {
                             <thead className="bg-white text-gray-700 border-b border-black/30">
                                 <tr>
                                     <th className="py-3 px-4 text-right font-medium w-1/2">
-                                        <p className="flex justify-center">محصول</p>
+                                        <p className="flex mr-3.5">محصول</p>
                                     </th>
                                     <th className="py-3 px-4 text-right font-medium">
                                         <p className="flex justify-center">قیمت</p>
@@ -129,9 +129,9 @@ export default function Basket() {
                                     <div className="flex gap-1">
                                         <Image src={item.image} width="100" height="100" alt={item.title} />
                                         <div>
-                                            <p className="w-[180px] font-bold text-[12px] sm:text-[14px] mt-[3px] text-right">{item.title}</p>
-                                            <p className="text-[10px] sm:text-[12px] text-black/60 mt-2">گارانتی : گارانتی دوساله پوزیترون</p>
-                                            <div className="flex gap-1 text-[10px] sm:text-[12px] text-black/60 mt-2">
+                                            <p className="w-[180px] font-bold text-[14px] md:text-[16px] mt-[3px] text-right">{item.title}</p>
+                                            <p className="text-[12px] md:text-[14px] text-black/60 mt-2">گارانتی : گارانتی دوساله پوزیترون</p>
+                                            <div className="flex gap-1 text-[12px] md:text-[14px] text-black/60 mt-2">
                                                 <IoStorefrontOutline />
                                                 <p>فروشگاه اینترنتی زمان ایران</p>
                                             </div>
@@ -173,7 +173,7 @@ export default function Basket() {
                     <div className="w-full h-[3px] md:h-1 lg:h-[5px] rounded-[1000%] bg-black/10 my-7 md:my-10 lg:my-13" />
 
                     <div className="*:mb-2 text-[12px] md:text-[16px] lg:text-[18px] font-bold">
-                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
+                        <div className="flex justify-between border-0 md:border border-black/30 p-2 rounded-xl mb-2">
                             <div className="flex gap-1">
                                 <p>قیمت</p>
                                 <p className="font-[yekanBakhFa]!">{(totalItems)}</p>
@@ -183,15 +183,15 @@ export default function Basket() {
                                 {totalPrice.toLocaleString()} تومان
                             </p>
                         </div>
-                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
+                        <div className="flex justify-between items-center border-0 md:border border-black/30 p-2 rounded-xl mb-2">
                             <p>موجودی کیف پول :</p>
                             <p className="font-[yekanBakhFa]!">0 تومان</p>
                         </div>
-                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
+                        <div className="flex justify-between items-center border-0 md:border border-black/30 p-2 rounded-xl mb-2">
                             <p>کد تخفیف :</p>
                             <input type="text" placeholder="کد تخفیف خود را در اینجا وارد کنید" className="w-[57%] md:w-[33%] lg:w-[25%] h-4 bg-stone-50 text-[10px] md:text-[12px] lg:text-[14px] text-black/50 font-medium p-3 outline-0 border border-black/30 rounded-lg text-center" />
                         </div>
-                        <div className="flex justify-between border border-t-0  border-black/30 p-2 rounded-xl mb-2">
+                        <div className="flex justify-between items-center  border-0 md:border border-black/30 p-2 rounded-xl mb-2">
                             <div className="flex gap-1">
                                 <p>قیمت</p>
                                 <p className="font-[yekanBakhFa]!">{(totalItems)}</p>
@@ -201,14 +201,14 @@ export default function Basket() {
                                 {totalPrice.toLocaleString()} تومان
                             </p>
                         </div>
-                        <div className="flex justify-between items-center border border-t-0  border-black/30 p-2 rounded-xl mb-2">
+                        <div className="flex justify-between items-center border-0 md:border border-black/30 p-2 rounded-xl mb-2">
                             <p>هزینه ارسال :</p>
                             <div className="w-45 md:w-60 lg:w-75 bg-white p-1.5 md:p-2 lg:p-3 text-[8px] md:text-[10px] lg:text-[12px] text-blue-600 text-center rounded-2xl">
                                 <p>هزینه‌ی ارسال در ادامه بر اساس آدرس، زمان و نحوه‌ی ارسال انتخابی شما‌ محاسبه و به این مبلغ اضافه خواهد شد</p>
                             </div>
                         </div>
                         <div className="flex justify-center">
-                            <div className="w-[70%] bg-red-600 p-3 text-[16px] text-white text-shadow-lg text-center rounded-2xl">
+                            <div className="w-full bg-red-600 p-1 md:p-3 text-[14px] md:text-[16px] text-white text-shadow-lg text-center rounded-2xl">
                                 <p>مرحله بعدی</p>
                             </div>
                         </div>
