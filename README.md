@@ -1,7 +1,6 @@
 # 🛍️ ShopZamanIran
 
-A modern and responsive **e-commerce website** built with **Next.js**, designed to simulate a real online store experience with product listings, categories, and a dynamic shopping basket.  
-The project is still under active development and will include more features such as authentication, product management, and payment integration.
+I built this e-commerce project using Next.js. The project is fully responsive, and I have also implemented SSR (Server-Side Rendering).
 
 ---
 
